@@ -19,7 +19,10 @@ subprojects {
   }
 
   dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.7-R0.1-SNAPSHOT")
+    // Paper 26.2 — Minecraft versioning switched from 1.21.x to 26.x
+    compileOnly("io.papermc.paper:paper-api:26.2.build.121-stable")
+    // Paper 26 no longer exposes javax.annotation; Delphi API still uses @Nullable.
+    compileOnly("com.google.code.findbugs:jsr305:3.0.2")
 
     // Test dependencies
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.10.3")
@@ -31,7 +34,8 @@ subprojects {
     testImplementation("org.slf4j:slf4j-api:2.0.13")
     testImplementation("org.slf4j:slf4j-simple:2.0.13")
     testImplementation("it.unimi.dsi:fastutil:8.5.13")
-    testImplementation("io.papermc.paper:paper-api:1.21.7-R0.1-SNAPSHOT")
+    testImplementation("io.papermc.paper:paper-api:26.2.build.121-stable")
+    testImplementation("com.google.code.findbugs:jsr305:3.0.2")
 
     if (name != "api" && name != "test-plugin") {
       val lombok = "org.projectlombok:lombok:1.18.38"
@@ -49,7 +53,7 @@ subprojects {
       systemProperty("joml.format", "false")
     }
     compileJava {
-      options.release = 21
+      options.release = 25
       options.encoding = Charsets.UTF_8.name()
     }
     javadoc {

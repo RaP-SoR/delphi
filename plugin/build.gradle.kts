@@ -1,21 +1,19 @@
-import io.papermc.paperweight.userdev.ReobfArtifactConfiguration
-
 plugins {
   java
-  id("io.papermc.paperweight.userdev") version "2.0.0-beta.17"
+  id("io.papermc.paperweight.userdev") version "2.0.0-beta.24"
   id("com.gradleup.shadow") version "9.0.1"
 }
 
-val minecraftVersion = "1.21.7"
+// Paper 26.2 uses the new version scheme (no reobf from 26.1+)
+val minecraftVersion = "26.2"
 val pluginBaseName = "delphi-papermc"
 
-version = "$minecraftVersion-0.7.1"
-
-paperweight.reobfArtifactConfiguration.set(ReobfArtifactConfiguration.MOJANG_PRODUCTION)
+version = "$minecraftVersion-0.7.1-paper26"
 
 repositories {
   mavenCentral()
   maven("https://libraries.minecraft.net/")
+  maven("https://repo.papermc.io/repository/maven-public/")
 }
 
 dependencies {
@@ -28,11 +26,11 @@ dependencies {
 
   implementation("org.bstats:bstats-bukkit:3.0.2")
 
-  paperweight.paperDevBundle("$minecraftVersion-R0.1-SNAPSHOT")
+  paperweight.paperDevBundle("26.2.build.121-stable")
 }
 
 java {
-
+  toolchain.languageVersion.set(JavaLanguageVersion.of(25))
 }
 
 tasks {

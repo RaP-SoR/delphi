@@ -1,18 +1,18 @@
 package com.juliewoolie.delphirender;
 
+import io.papermc.paper.text.PaperComponents;
 import java.util.Objects;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.ComponentLike;
 import net.kyori.adventure.text.flattener.ComponentFlattener;
 import net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer;
-import org.bukkit.Bukkit;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.Nullable;
 
 public final class TextUtil {
   private TextUtil() {}
 
-  public static final ComponentFlattener FLATTENER = Bukkit.getUnsafe().componentFlattener();
+  public static final ComponentFlattener FLATTENER = PaperComponents.flattener();
 
   public static final PlainTextComponentSerializer PLAIN = PlainTextComponentSerializer.builder()
       .flattener(FLATTENER)
