@@ -26,7 +26,7 @@ $env:JAVA_HOME = "C:\Users\babar\AppData\Local\Programs\Eclipse Adoptium\jdk-25.
 Output:
 
 ```
-plugin/build/libs/delphi-papermc-26.2-0.7.1-paper26-all.jar
+plugin/build/libs/delphi-papermc-26.2-0.7.2-paper26-all.jar
 ```
 
 Copy that jar to `server/plugins/` (replace the old 1.21.7 Delphi jar), then restart the server.

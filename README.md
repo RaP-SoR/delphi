@@ -19,7 +19,7 @@
 * Fully documented Java API and JavaScript integration for easy scripting
 * Contuing development and new features being added all the time.
 * Extensive documentation (at [dev.juliewoolie.com](https://dev.juliewoolie.com/menus))
-* Fully documented Java API (at [dev.juliewoolie.com/menus/javadoc/0.7.1](https://dev.juliewoolie.com/menus/javadoc/0.7.1/))
+* Fully documented Java API (at [dev.juliewoolie.com/menus/javadoc/0.7.2](https://dev.juliewoolie.com/menus/javadoc/0.7.2/))
 * Devtools to help you create menus and fix issues.
 * All Delphi commands can be used in the `/execute` command and by datapack functions!
 

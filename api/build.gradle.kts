@@ -3,7 +3,7 @@ plugins {
   `maven-publish`
 }
 
-version = "0.7.1-SNAPSHOT"
+version = "0.7.2-SNAPSHOT"
 
 repositories {
   mavenCentral()

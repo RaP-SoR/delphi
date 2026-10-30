@@ -8,7 +8,7 @@ plugins {
 val minecraftVersion = "26.2"
 val pluginBaseName = "delphi-papermc"
 
-version = "$minecraftVersion-0.7.1-paper26"
+version = "$minecraftVersion-0.7.2-paper26"
 
 repositories {
   mavenCentral()
